@@ -1,12 +1,15 @@
 .header {
     width: 100%;
     height: auto;
-    border-bottom: 1px solid #ffffff0d;
-    position: fixed;
+    border-bottom: 1px solid #9191910d;
+    position: relative;
     margin-top: 0;
     z-index: 10;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 20px;
     background-color: #252525;
+    display: grid;
+    grid-template-columns: 14% 54% 8% 8% 8% 8%;
+    grid-template-rows: auto;
+    grid-template-areas: "a1 a2 a3 a4 a5 a6";
 }
 
 .header_text {
@@ -15,10 +18,9 @@
     font-style: normal;
     font-weight: 400;
     letter-spacing: 0em;
-    text-align: left;
+    text-align: center;
     color: currentColor;
-    display: inline-block;
-    float: left;
+    grid-area: a1;
 }
 
 .bold {
@@ -32,17 +34,32 @@
     font-style: normal;
     font-weight: 400;
     letter-spacing: 0em;
-    display: inline-block;
     vertical-align: middle;
-    position: relative;
-    float: right;
     text-align: center;
 }
 
 .header_menu:hover {
     background-color: #2c2c2c;
+    border-bottom: 1px solid #f52583;
+    cursor: pointer;
 }
 
 .header_text, .header_menu {
     font-size: max(.9vw, 1.5vh, 11.5px);
+}
+
+.header_menu_item1 {
+    grid-area: a3;
+}
+
+.header_menu_item2 {
+    grid-area: a4;
+}
+
+.header_menu_item3 {
+    grid-area: a5;
+}
+
+.header_menu_item4 {
+    grid-area: a6;
 }

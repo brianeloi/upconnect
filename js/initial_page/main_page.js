@@ -19,4 +19,20 @@ export const mainPage = () => {
   dispatchEvent(new Event('load'));
 
   //switchPage({ newPage: formPage, params: {formParams: { question: 'email' }} }) //TAKE IT OFF
+  window.onload = initPage;
+  function initPage(){
+    const faqs = document.getElementsByClassName('faq_question')
+    
+    for (let i = 0; i < faqs.length; i++) {
+      let faq = faqs[i]
+      faq.addEventListener('click', () => {
+        let faq_answer = faq.childNodes[1]
+        if(faq_answer.style.display == 'block') {
+          faq_answer.style.display="none";
+        } else {
+          faq_answer.style.display="block";
+        }
+      })
+    }
+  }
 }

@@ -1,8 +1,47 @@
-.main_page_body {
+/*cutting all edges of a div
+clip-path: polygon(
+    0 20%,
+    10% 0,
+    90% 0,
+    100% 20%,
+    100% 80%,
+    90% 100%,
+    10% 100%,
+    0% 80%
+  )*/
+
+.links_and_back {
     width: 100%;
-    height: 65%;
+    height: auto;
+    position: fixed;
+    margin-top: 29.3%;
+    display: grid;
+    z-index: 1;
+    grid-template-columns: 10% 40% 6% 34% 10%;
+    grid-template-rows: auto;
+    grid-template-areas: "a1 a2 a3 a4 a5";
+    text-align: center;
+}
+
+.links {
+    grid-area: a1;
+}
+
+.back_link {
+    margin-top: 100%;
+    grid-area: a5;
+    cursor: pointer;
+}
+
+.main_page_body1 {
+    width: 100%;
+    height: auto;
     z-index: 0;
-    padding-top: 10%;
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: 10% 40% 6% 34% 10%;
+    grid-template-rows: auto;
+    grid-template-areas: "a1 a2 a3 a4 a5";
 }
 
 a {
@@ -11,52 +50,72 @@ a {
 }
 
 .first_page_left_container {
-    width: 50%;
-    height: 100%;
-    padding: 0 0 0 0%;
-    display: inline-block;
-    float: left;
+    grid-area: a2;
+    height: auto;
     text-align: center;
 }
 
 .main_page_title {
     font-size: max(3.6vw, 6.0vh, 48px);
     display: inline-block;
-    float: left;
     width: 100%;
+    height: auto;
 }
 
 .main_page_text {
     font-size: max(1.6vw, 2.7vh, 21px);
-    float: left;
     font-family: 'Inconsolata', monospace;
-    display: inline-block;
     width: 100%;
+    height: auto;
+    margin-top: 6%;
+}
+
+.first_page_buttons {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 10% 42% 4% 34% 10%;
+    grid-template-rows: auto;
+    grid-template-areas: "b1 b2 b3 b4 b5";
+    padding: 5%;
 }
 
 .btn {
-    margin: 5% 2%;
-    padding: 1.5% 2%;
+    padding: 3.5% 6%;
     font-family: 'Inconsolata', monospace;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: inherit;
+    border: none;
+}
+
+.btn1 {
+    grid-area: b2;
+}
+
+.btn2 {
+    grid-area: b4;
+}
+
+.btn_container {
+    background-color: #f52583;
+    padding: 1px;
+    clip-path: polygon(0 0%, 0% 0, 90% 0, 100% 0%, 100% 63%, 92% 100%, 0% 100%, 0% 80%);
 }
 
 .btn_pink_full {
     background-color: #f52583;
-    border: 1px solid #f52583;
     color: white;
-    transition-delay: 250ms;
 }
 
 .btn_pink_full:hover {
-    background-color: #f52d88;
+    background-color: #252525;
     cursor: pointer;
-    box-shadow: #f52d88 0px 4px 29px 0px;
-    transition: box-shadow 0.3s ease-in-out 0s;
 }
 
 .btn_pink_empty {
-    background-color: #0000;
-    border: 1px solid #f52583;
+    background-color: #252525;
     color: #f52583;
 }
 
@@ -67,10 +126,10 @@ a {
 }
 
 .first_image_container {
-    float: left;
-    width: 50%;
+    width: 100%;
+    height: auto;
     padding: 0 0 0 0;
-    display: inline-block;
+    grid-area: a4;
 }
 
 .first_image {
@@ -87,8 +146,9 @@ a {
 /*===================================2=================================*/
 
 .main_page_second_sector {
-    height: 50%;
+    height: auto;
     width: 100%;
+    margin-top: 3%;
 }
 
 .second_sector_title {
@@ -105,7 +165,7 @@ a {
 
 .cards_container {
     position: relative;
-    margin-top: 10%;
+    margin-top: 5%;
     width: 100%;
     height: auto;
     display: grid;
@@ -116,19 +176,28 @@ a {
 
 .second_page_cards {
     text-align: center;
-    border: 2px solid #f52583;
+    background-color: #f52583;
     margin: 0 2% 0 2%;
-    padding: 7% 2% 3%;
-    clip-path: polygon(
-    0 20%,
-    10% 0,
-    90% 0,
-    100% 20%,
-    100% 80%,
-    90% 100%,
-    10% 100%,
-    0% 80%
-  )
+    padding: 1px;
+    clip-path: polygon(0 12%, 12% 0, 90% 0, 100% 0%, 100% 88%, 89% 100%, 0% 100%, 0% 80%);
+}
+
+.inside_cards{
+    clip-path: polygon(0 12%, 12% 0, 90% 0, 100% 0%, 100% 88%, 89% 100%, 0% 100%, 0% 80%);
+    background-color: #252525;
+    width: 100%;
+    height: 100%;
+}
+
+.card_content{
+    width: 94%;
+    height: 92%;
+    background-color: #00000000;
+    position: relative;
+    border: solid 1px #f52583;
+    top: 3%;
+    left: 3%;
+    clip-path: polygon(0 74%, 38% 0, 100% 0, 100% 0%, 100% 54%, 60% 100%, 0% 100%, 0% 100%);
 }
 
 .second_page_card1 {
@@ -145,8 +214,17 @@ a {
 
 
 .title_second_page_card{
+    padding-top: 6%;
     font-size: 20px;
     color: white;
+    position: relative;
+    top: 3%;
+    right: 3%;
+    border: solid 1px #f52583;
+    border-bottom: 0;
+    border-left: 0;
+    clip-path: polygon(0 44%, 79% 0, 100% 0, 100% 0%, 100% 88%, 76% 100%, 0% 100%, 0% 80%);
+    margin-left: 5%;
 }
 
 .text_second_page_card{
@@ -160,8 +238,17 @@ a {
 .link_2nd_page_card {
     color: #f52583;
     font-size: 13px;
-    margin-top: 7%;
     margin-bottom: 5%;
+    padding: 7% 4%;
+    bottom: 4%;
+    top: 3%;
+    position: relative;
+    border: solid 1px #f52583;
+    border-top: 0;
+    border-right: 0;
+    left: 3%;
+    clip-path: polygon(0 16%, 80% 0, 100% 0, 100% 0%, 100% 88%, 22% 100%, 0% 100%, 0% 80%);
+    margin-right: 9%;
 }
 
 /*===================================3=================================*/
@@ -170,7 +257,7 @@ a {
     height: auto;
     width: 100%;
     position: relative;
-    margin-top: 13%;
+    margin-top: 5%;
 }
 
 .third_sector_title {
@@ -195,18 +282,14 @@ a {
     width: 100%;
     height: auto;
     display: grid;
-    grid-template-columns: 14% 34% 8% 30% 14%;
+    grid-template-columns: 16% 34% 2% 32% 16%;
     grid-template-rows: auto;
     grid-template-areas: "b1 b2 b3 b4 b5";
     text-align: left;
 }
 
-.third_sector_grid1 {
-    margin-top: 10%;
-}
-
-.third_sector_grid2, .third_sector_grid3 {
-    margin-top: 1%;
+.third_sector_grid1, .third_sector_grid2, .third_sector_grid3 {
+    margin-top: 5%;
 }
 
 .third_sector_grid1_info {
@@ -236,18 +319,13 @@ a {
     grid-area: b2;
 }
 
-.third_sector_grid1_img {
-    height: 80%;
-    width: auto;
-}
-
 /*=============================4=============================*/
 
 .main_page_fourth_sector {
     height: auto;
     width: 100%;
     position: relative;
-    margin-top: 3%;
+    margin-top: 4%;
 }
 
 .cards_container4 {
@@ -260,6 +338,78 @@ a {
     grid-template-rows: auto;
     grid-template-areas: "a1 a2 a3 a4 a5";
 }
+
+/*=================================5=================================*/
+
+.main_page_fifth_sector {
+    height: auto;
+    width: 100%;
+    position: relative;
+    margin-top: 6%;
+}
+
+.main_page_fifth_sector_faqs {
+    height: auto;
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: auto;
+    grid-template-areas: "a1 a2 a3";
+}
+
+.faq_question {
+    border: 1px solid #f52583;
+    grid-area: a2;
+    padding: 2%;
+    cursor: pointer;
+    margin-top: 2%;
+}
+
+.faq_question_row1 {
+    grid-row: 1;
+}
+
+.faq_question_row2 {
+    grid-row: 2;
+}
+
+.faq_question_row3 {
+    grid-row: 2;
+}
+
+.faq_answer {
+    display: none;
+}
+
+/*================================6=================================*/
+
+.main_page_sixth_sector {
+    height: auto;
+    width: 100%;
+    position: relative;
+    margin-top: 6%
+}
+
+.main_page_sixth_sector_buttons {
+    margin-top: 3%;
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: grid;
+    grid-template-columns: 30% 19% 2% 19% 30%;
+    grid-template-rows: auto;
+    grid-template-areas: "a1 a2 a3 a4 a5";
+}
+
+.sixth_sector_btn1 {
+    grid-area: a2;
+}
+
+.sixth_sector_btn2 {
+    grid-area: a4;
+}
+
 
 /*==============================FOOTER==============================*/
 
