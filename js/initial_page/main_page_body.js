@@ -2,6 +2,9 @@ import { vectorWorldConnection } from '../../images/vector_world_connection.js'
 import { vectorRocketTeam } from '../../images/vector_rocket_team.js'
 import { vectorECommerce} from '../../images/vector_e_commerce.js'
 import { vectorMobile } from '../../images/vector_mobile.js'
+import { vectorMultiScreen } from '../../images/vector_multi_screen.js'
+import { vectorPieces } from '../../images/vector_pieces.js'
+import { vectorSecurity } from '../../images/vector_security.js'
 
 export const mainPageBody = () => {
     let whatsapp_link = 'https://api.whatsapp.com/send?phone=5511989213124&text=Ol%C3%A1,%20gostaria'+
@@ -23,7 +26,7 @@ export const mainPageBody = () => {
                         '<img src="images/seta_rosa.png" alt="instagram" width="50" height="50">' +
                     '</div>'+
                 '</div>'
-    let body =  '<div class="main_page_body1">' +
+    let body =  '<div class="main_page_body1 main_page_sector">' +
                     '<div class="first_page_left_container">'+
                         '<div class="main_page_title base_font_color">Transforme sua <br>Presença Digital</div>'+
                         '<div class="main_page_text base_font_color">' +
@@ -48,7 +51,7 @@ export const mainPageBody = () => {
                     '</div>'+
                 '</div>'
 
-    let body2 = '<div id="discription" class="main_page_second_sector">' +
+    let body2 = '<div id="discription" class="main_page_second_sector main_page_sector">' +
                     '<div class="second_sector_title base_pink_font">UpConnect, a sua software house</div>'+
                     '<div class="main_page_text second_sector_text base_font_color">' +
                         'Aqui combinamos expertise técnica com criatividade para oferecer soluções digitais<br>'+
@@ -112,7 +115,7 @@ export const mainPageBody = () => {
                     '</div>'+
                 '</div>'
 
-    let body3 = '<div id="our_services" class="main_page_third_sector">' +
+    let body3 = '<div id="our_services" class="main_page_third_sector main_page_sector">' +
                     '<div class="second_sector_title base_pink_font">Nossos Serviços</div>'+
                     '<div class="third_sector_grids_container">'+
                         '<div class="third_sector_grid third_sector_grid1">'+
@@ -165,8 +168,8 @@ export const mainPageBody = () => {
                     '</div>'+
                 '</div>'
 
-    let body4 = '<div class="main_page_fourth_sector">' +
-                    '<div class="second_sector_title base_pink_font">Outros Serviços</div>'+
+    let body4 = '<div class="main_page_fourth_sector main_page_sector">' +
+                    '<div class="second_sector_title base_pink_font">+ Serviços</div>'+
                     '<div class="main_page_text second_sector_text base_font_color">' +
                         'Se você é uma pequena ou média empresa, uma startup em crescimento, ou uma grande<br>'+
                         ' corporação buscando transformação digital, estamos aqui para ajudar.' +
@@ -174,7 +177,10 @@ export const mainPageBody = () => {
                     '<div class="cards_container4">'+
                         '<div class="second_page_cards second_page_card1">'+
                             '<div class="inside_cards">'+
-                                '<div class="title_second_page_card">'+
+                                '<div class="fourth_sector_img_container">'+
+                                    vectorMultiScreen +
+                                '</div>'+
+                                '<div class="title_fourth_page_card">'+
                                     'Marketing Digital<br>'+
                                     'e Social Media'+
                                 '</div>'+
@@ -193,7 +199,10 @@ export const mainPageBody = () => {
                         '</div>'+
                         '<div class="second_page_cards second_page_card2">'+
                             '<div class="inside_cards">'+
-                                '<div class="title_second_page_card">'+
+                                '<div class="fourth_sector_img_container">'+
+                                    vectorPieces +
+                                '</div>'+
+                                '<div class="title_fourth_page_card">'+
                                     'Design Gráfico e<br>'+
                                     'Identidade Visual'+
                                 '</div>'+
@@ -212,7 +221,10 @@ export const mainPageBody = () => {
                         '</div>'+
                         '<div class="second_page_cards second_page_card3">'+
                             '<div class="inside_cards">'+
-                                '<div class="title_second_page_card">'+
+                                '<div class="fourth_sector_img_container">'+
+                                    vectorSecurity +
+                                '</div>'+
+                                '<div class="title_fourth_page_card">'+
                                     'Hospedagem e<br>'+
                                     'Manutenção'+
                                 '</div>'+
@@ -232,7 +244,7 @@ export const mainPageBody = () => {
                     '</div>'+
                 '</div>'
 
-    let body5 = '<div class="main_page_fifth_sector">' +
+    let body5 = '<div class="main_page_fifth_sector main_page_sector">' +
                     '<div class="second_sector_title base_pink_font">FAQ</div>'+
                     '<div class="main_page_text second_sector_text base_font_color">' +
                         'Perguntas mais frequentes' +
@@ -257,7 +269,7 @@ export const mainPageBody = () => {
                     '</div>'+
                 '</div>'
 
-    let body6 = '<div id="budget" class="main_page_sixth_sector">' +
+    let body6 = '<div id="budget" class="main_page_sixth_sector main_page_sector">' +
                     '<div class="second_sector_title base_pink_font">Faça agora seu orçamento</div>'+
                     '<div class="main_page_text second_sector_text base_font_color">' +
                         'Solicite seu orçamento ou entre em contato conosco hoje mesmo para agendar uma<br>' +
