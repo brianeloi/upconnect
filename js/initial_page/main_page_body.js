@@ -6,11 +6,15 @@ import { vectorMultiScreen } from '../../images/vector_multi_screen.js'
 import { vectorPieces } from '../../images/vector_pieces.js'
 import { vectorSecurity } from '../../images/vector_security.js'
 import { vectorPlus } from '../../images/vector_plus.js'
+import { vectorUpConnectBig } from '../../images/vector_upconnect_big.js'
 
 export const mainPageBody = () => {
     let whatsapp_link = 'https://api.whatsapp.com/send?phone=5511989213124&text=Ol%C3%A1,%20gostaria'+
                         '%20de%20obter%20informa%C3%A7%C3%B5es%20sobre%20servi%C3%A7os%20'+
                         'da%20UpConnect'
+    let upconnect_big_name =   '<div class="upconnect_big_name">'+
+                                    vectorUpConnectBig +
+                                '</div>'
     let links = '<div class="links_and_back">'+
                     '<div class="links">'+
                         '<a href="https://www.instagram.com/upconnectweb">'+
@@ -314,5 +318,6 @@ export const mainPageBody = () => {
                 '</div>'+
             '</div>'
 
-    return links + body + body2 + body3 + body4 + body5 + body6 + footer
+    return  upconnect_big_name + links + body + body2 + body3 + body4 +
+            body5 + body6 + upconnect_big_name + footer
 }

@@ -10,6 +10,11 @@ clip-path: polygon(
     0% 80%
   )*/
 
+.upconnect_big_name {
+    text-align: center;
+    margin: 2% 0 -9%;
+}
+
 .links_and_back {
     width: 100%;
     height: auto;
