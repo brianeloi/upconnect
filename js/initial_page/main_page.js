@@ -26,11 +26,18 @@ export const mainPage = () => {
     for (let i = 0; i < faqs.length; i++) {
       let faq = faqs[i]
       faq.addEventListener('click', () => {
-        let faq_answer = faq.childNodes[1]
+        let faq_answer = faq.childNodes[2]
         if(faq_answer.style.display == 'block') {
           faq_answer.style.display="none";
         } else {
           faq_answer.style.display="block";
+        }
+
+        let faq_plus_x = faq.childNodes[1]
+        if(faq_answer.style.display == 'block') {
+          faq_plus_x.style.transform="rotate(45deg)";
+        } else {
+          faq_plus_x.style.transform="none";
         }
       })
     }

@@ -5,6 +5,7 @@ import { vectorMobile } from '../../images/vector_mobile.js'
 import { vectorMultiScreen } from '../../images/vector_multi_screen.js'
 import { vectorPieces } from '../../images/vector_pieces.js'
 import { vectorSecurity } from '../../images/vector_security.js'
+import { vectorPlus } from '../../images/vector_plus.js'
 
 export const mainPageBody = () => {
     let whatsapp_link = 'https://api.whatsapp.com/send?phone=5511989213124&text=Ol%C3%A1,%20gostaria'+
@@ -252,6 +253,9 @@ export const mainPageBody = () => {
                     '<div class="main_page_fifth_sector_faqs">'+
                         '<div class="main_page_text base_font_color faq_question faq_question_row1">' +
                             'Pergunta 1?' +
+                            '<div class="plus_x">'+
+                                vectorPlus +
+                            '</div>'+
                             '<div class="main_page_text base_font_color faq_answer">' +
                                 'Resposta 1<br>' +
                                 'Resposta 1<br>' +
@@ -260,6 +264,9 @@ export const mainPageBody = () => {
                         '</div>' +
                         '<div class="main_page_text base_font_color faq_question faq_question_row2">' +
                             'Pergunta 2?' +
+                            '<div class="plus_x">'+
+                                vectorPlus +
+                            '</div>'+
                             '<div class="main_page_text base_font_color faq_answer">' +
                                 'Resposta 2<br>' +
                                 'Resposta 2<br>' +
