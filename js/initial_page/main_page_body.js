@@ -35,10 +35,10 @@ export const mainPageBody = () => {
                     '<div class="first_page_left_container">'+
                         '<div class="main_page_title base_font_color">Transforme sua <br>Presença Digital</div>'+
                         '<div class="main_page_text base_font_color">' +
-                            'No mundo atual ter uma presença online robusta e <br>'+
-                            'eficiente é crucial para o sucesso de qualquer <br>'+
-                            'negócio. Estamos aqui para ajudar sua empresa a <br>'+
-                            'se destacar e crescer neste cenário competitivo.' +
+                            'No mundo atual ter uma presença online robusta<br>'+
+                            'e eficiente é crucial para o sucesso de qualquer negócio.<br>'+
+                            'Estamos aqui para ajudar sua empresa a se <b>destacar</b> e crescer neste<br>'+
+                            'cenário competitivo.' +
                         '</div>' +
                         '<div class="first_page_buttons">'+
                             '<div class="btn_container btn1">'+
@@ -59,7 +59,7 @@ export const mainPageBody = () => {
     let body2 = '<div id="discription" class="main_page_second_sector main_page_sector">' +
                     '<div class="second_sector_title base_pink_font">UpConnect, a sua software house</div>'+
                     '<div class="main_page_text second_sector_text base_font_color">' +
-                        'Aqui combinamos expertise técnica com criatividade para oferecer soluções digitais<br>'+
+                        'Aqui combinamos expertise técnica com criatividade para oferecer soluções digitais '+
                         'que transformam a maneira como você faz negócios.' +
                     '</div>' +
                     '<div class="cards_container">'+
@@ -158,8 +158,8 @@ export const mainPageBody = () => {
                     '<div class="third_sector_grids_container">'+
                         '<div class="third_sector_grid third_sector_grid3">'+
                             '<div class="third_sector_grid1_info">'+
-                                '<div class="third_sector_grid_title base_font_color">Desenvolvimento<br>'+
-                                'de Aplicativos</div>'+
+                                '<div class="third_sector_grid_title base_font_color">Desenvolvimento de<br>'+
+                                'Aplicativos Mobile</div>'+
                                 '<div class="main_page_text third_sector_grid_text base_font_color">' +
                                     'Criamos aplicativos móveis inovadores para<br>'+
                                     'Android e iOS, proporcionando experiências<br>'+
@@ -256,32 +256,170 @@ export const mainPageBody = () => {
                     '</div>' +
                     '<div class="main_page_fifth_sector_faqs">'+
                         '<div class="main_page_text base_font_color faq_question faq_question_row1">' +
-                            'Pergunta 1?' +
+                            '1. Quanto tempo leva para criar um site?' +
                             '<div class="plus_x">'+
                                 vectorPlus +
                             '</div>'+
                             '<div class="main_page_text base_font_color faq_answer">' +
-                                'Resposta 1<br>' +
-                                'Resposta 1<br>' +
-                                'Resposta 1<br>' +
+                                'O prazo varia de acordo com a complexidade e o número de páginas do site. Para sites ' +
+                                'simples, o tempo médio é de 2 a 4 semanas. Projetos mais complexos, como e-commerces ' +
+                                'ou sites com funcionalidades específicas, podem levar de 6 a 8 semanas.' +
                             '</div>'+
                         '</div>' +
                         '<div class="main_page_text base_font_color faq_question faq_question_row2">' +
-                            'Pergunta 2?' +
+                            '1. Quais informações preciso fornecer para começar?' +
                             '<div class="plus_x">'+
                                 vectorPlus +
                             '</div>'+
                             '<div class="main_page_text base_font_color faq_answer">' +
-                                'Resposta 2<br>' +
-                                'Resposta 2<br>' +
-                                'Resposta 2<br>' +
+                                'Inicialmente, precisamos entender o objetivo do site e o público-alvo. Além >' +
+                                'disso, qualquer conteúdo relevante, como textos, imagens, logotipo, identidade ' +
+                                'visual e referências de design, será útil para personalizar o projeto.' +
+                            '</div>'+
+                        '</div>' +
+                        '<div class="main_page_text base_font_color faq_question faq_question_row3">' +
+                            '3. Vocês oferecem suporte e manutenção após o site ser lançado?' +
+                            '<div class="plus_x">'+
+                                vectorPlus +
+                            '</div>'+
+                            '<div class="main_page_text base_font_color faq_answer">' +
+                                'Sim! Oferecemos planos de suporte e manutenção para garantir que seu site ' +
+                                'esteja sempre atualizado e seguro, além de ajustes e atualizações conforme necessário.' +
+                            '</div>'+
+                        '</div>' +
+                        '<div class="main_page_text base_font_color faq_question faq_question_row4">' +
+                            '4. Quais são os custos envolvidos na criação de um site?' +
+                            '<div class="plus_x">'+
+                                vectorPlus +
+                            '</div>'+
+                            '<div class="main_page_text base_font_color faq_answer">' +
+                                'O valor depende do escopo do projeto e das funcionalidades desejadas. ' +
+                                'Normalmente, consideramos a quantidade de páginas, design personalizado, .' +
+                                'integração com ferramentas externas, e-commerce e outros fatores. '+
+                                'Entre em contato para um orçamento detalhado'+
+                            '</div>'+
+                        '</div>' +
+                        '<div class="main_page_text base_font_color faq_question faq_question_row5">' +
+                            '5. Vocês trabalham com plataformas específicas como WordPress ou Shopify?' +
+                            '<div class="plus_x">'+
+                                vectorPlus +
+                            '</div>'+
+                            '<div class="main_page_text base_font_color faq_answer">' +
+                                'Não, desenvolvemos todos os sites de forma personalizada e do zero.' +
+                                'Todo o desenvolvimento é realizado pelo nosso time de TI, garantindo ' +
+                                'maior flexibilidade e personalização para atender exatamente às '+
+                                'suas necessidades.'+
+                            '</div>'+
+                        '</div>' +
+                        '<div class="main_page_text base_font_color faq_question faq_question_row6">' +
+                            '6. O site será responsivo?' +
+                            '<div class="plus_x">'+
+                                vectorPlus +
+                            '</div>'+
+                            '<div class="main_page_text base_font_color faq_answer">' +
+                                'Sim, todos os nossos projetos são desenvolvidos para serem responsivos e ' +
+                                'se adaptarem a dispositivos móveis (smartphones e tablets), garantindo ' +
+                                'uma experiência de navegação consistente.'+
+                            '</div>'+
+                        '</div>' +
+                        '<div class="main_page_text base_font_color faq_question faq_question_row7">' +
+                            '7. Posso atualizar o conteúdo do site por conta própria?' +
+                            '<div class="plus_x">'+
+                                vectorPlus +
+                            '</div>'+
+                            '<div class="main_page_text base_font_color faq_answer">' +
+                                'Sim! Desenvolvemos nossos sites com áreas administrativas customizadas para ' +
+                                'que você possa gerenciar o conteúdo de forma simples e intuitiva, sem ' +
+                                'precisar de conhecimentos técnicos.'+
+                            '</div>'+
+                        '</div>' +
+                        '<div class="main_page_text base_font_color faq_question faq_question_row8">' +
+                            '8. Vocês oferecem otimização para SEO (Search Engine Optimization)?' +
+                            '<div class="plus_x">'+
+                                vectorPlus +
+                            '</div>'+
+                            '<div class="main_page_text base_font_color faq_answer">' +
+                                'Sim, todos os sites que desenvolvemos vêm com configurações básicas de SEO. ' +
+                                'Também oferecemos serviços de otimização avançada para ajudar seu site a ' +
+                                'ter um melhor posicionamento nos mecanismos de busca.'+
+                            '</div>'+
+                        '</div>' +
+                        '<div class="main_page_text base_font_color faq_question faq_question_row9">' +
+                            '9. Vocês oferecem hospedagem e registro de domínio?' +
+                            '<div class="plus_x">'+
+                                vectorPlus +
+                            '</div>'+
+                            '<div class="main_page_text base_font_color faq_answer">' +
+                                'Sim, podemos ajudar na configuração de hospedagem e no registro de domínio, ' +
+                                'mas também trabalhamos com parceiros de confiança. Caso você já tenha um ' +
+                                'serviço de hospedagem, podemos integrá-lo ao projeto.'+
+                            '</div>'+
+                        '</div>' +
+                        '<div class="main_page_text base_font_color faq_question faq_question_row10">' +
+                            '10. Quais são as etapas de um projeto de criação de site?' +
+                            '<div class="plus_x">'+
+                                vectorPlus +
+                            '</div>'+
+                            '<div class="main_page_text base_font_color faq_answer">' +
+                                'O processo geralmente segue estas etapas: <br><br>' +
+                                '<li>Briefing – Reunião para entender as necessidades e objetivos do cliente.</li>' +
+                                '<li>Planejamento – Definição do escopo do projeto e wireframes (esqueleto do site).</li>'+
+                                '<li>Design – Criação do layout visual e identidade do site.</li>'+
+                                '<li>Desenvolvimento – Codificação e desenvolvimento das funcionalidades com tecnologias modernas.</li>'+
+                                '<li>Revisão e Testes – Ajustes finais e testes de performance e responsividade.</li>'+
+                                '<li>Lançamento – Publicação do site e entrega oficial ao cliente.</li>' +
+                                '<li>Suporte e Manutenção – Suporte contínuo, se necessário.</li>' +
+                            '</div>'+
+                        '</div>' +
+                        '<div class="main_page_text base_font_color faq_question faq_question_row11">' +
+                            '11. O que acontece se eu precisar de alterações após o lançamento?' +
+                            '<div class="plus_x">'+
+                                vectorPlus +
+                            '</div>'+
+                            '<div class="main_page_text base_font_color faq_answer">' +
+                                'Após o lançamento, oferecemos um período de ajustes e revisões para correções ' +
+                                'simples. Para alterações maiores, oferecemos pacotes de manutenção para ' +
+                                'atender às suas novas necessidades.'+
+                            '</div>'+
+                        '</div>' +
+                        '<div class="main_page_text base_font_color faq_question faq_question_row12">' +
+                            '12. Vocês oferecem criação de conteúdo para o site?' +
+                            '<div class="plus_x">'+
+                                vectorPlus +
+                            '</div>'+
+                            '<div class="main_page_text base_font_color faq_answer">' +
+                                'Sim, também oferecemos serviços de redação de conteúdo, design de imagens ' +
+                                'e otimização de conteúdo para SEO, para que o site seja informativo e ' +
+                                'atraente para os visitantes.'+
+                            '</div>'+
+                        '</div>' +
+                        '<div class="main_page_text base_font_color faq_question faq_question_row13">' +
+                            '13. Vocês fazem integração com redes sociais e ferramentas de marketing?' +
+                            '<div class="plus_x">'+
+                                vectorPlus +
+                            '</div>'+
+                            '<div class="main_page_text base_font_color faq_answer">' +
+                                'Sim, podemos integrar o site com suas redes sociais, Google Analytics, ' +
+                                'ferramentas de e-mail marketing e chatbots, garantindo uma presença ' +
+                                'digital completa.'+
+                            '</div>'+
+                        '</div>' +
+                        '<div class="main_page_text base_font_color faq_question faq_question_row14">' +
+                            '14. Vocês fazem integração com redes sociais e ferramentas de marketing?' +
+                            '<div class="plus_x">'+
+                                vectorPlus +
+                            '</div>'+
+                            '<div class="main_page_text base_font_color faq_answer">' +
+                                'Sim, podemos integrar o site com suas redes sociais, Google Analytics, ' +
+                                'ferramentas de e-mail marketing e chatbots, garantindo uma presença ' +
+                                'digital completa.'+
                             '</div>'+
                         '</div>' +
                     '</div>'+
                 '</div>'
 
     let body6 = '<div id="budget" class="main_page_sixth_sector main_page_sector">' +
-                    '<div class="second_sector_title base_pink_font">Faça agora seu orçamento</div>'+
+                    '<div class="third_sector_grid_title base_font_color">Faça agora seu orçamento</div>'+
                     '<div class="main_page_text second_sector_text base_font_color">' +
                         'Solicite seu orçamento ou entre em contato conosco hoje mesmo para agendar uma<br>' +
                         'conversa e descobrir como podemos transformar o futuro digital do sue negócio'+

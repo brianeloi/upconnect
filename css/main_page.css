@@ -54,7 +54,7 @@ clip-path: polygon(
     z-index: 0;
     margin-top: 5%;
     display: grid;
-    grid-template-columns: 2% 48% 6% 42% 2%;
+    grid-template-columns: 8% 46% 2% 42% 2%;
     grid-template-rows: auto;
     grid-template-areas: "a1 a2 a3 a4 a5";
 }
@@ -71,28 +71,30 @@ a {
 }
 
 .main_page_title {
-    font-size: max(3.6vw, 6.0vh, 48px);
+    font-size: max(3vw, 40px);
     display: inline-block;
     width: 100%;
     height: auto;
+    text-align: left;
 }
 
 .main_page_text {
-    font-size: max(1.6vw, 2.7vh, 21px);
+    font-size: max(1.2vw, 16px);
     font-family: 'Inconsolata', monospace;
     width: 100%;
     height: auto;
     margin-top: 6%;
+    text-align: left;
 }
 
 .first_page_buttons {
     width: 100%;
     height: auto;
     display: grid;
-    grid-template-columns: 10% 42% 4% 34% 10%;
+    grid-template-columns: 0% 40% 4% 36% 20%;
     grid-template-rows: auto;
     grid-template-areas: "b1 b2 b3 b4 b5";
-    padding: 5%;
+    padding: 5% 0;
 }
 
 .btn {
@@ -103,7 +105,7 @@ a {
     height: 100%;
     clip-path: inherit;
     border: none;
-    font-size: 140%;
+    font-size: max(1vw, 14px);
 }
 
 .btn1 {
@@ -132,7 +134,7 @@ a {
 
 .btn_pink_empty {
     background-color: #263238;
-    color: #f52583;
+    color: white;
 }
 
 .btn_pink_empty:hover {
@@ -169,13 +171,18 @@ a {
 .second_sector_title {
     text-align: center;
     position: relative;
-    font-size: 55px;
+    font-size: 3vw;
+    width: 75%;
+    margin-left: 13%;
 }
 
 .second_sector_text {
     margin-top: 2%;
     text-align: center;
     position: relative;
+    font-size: max(1.5vw, 14px);
+    width: 75%;
+    margin-left: 13%;
 }
 
 .cards_container {
@@ -230,7 +237,7 @@ a {
 
 .title_second_page_card{
     padding-top: 6%;
-    font-size: 20px;
+    font-size: max(1.3vw, 14px);
     color: white;
     position: relative;
     top: 3%;
@@ -245,7 +252,7 @@ a {
 .text_second_page_card{
     position: relative;
     margin-top: 7%;
-    font-size: 20px;
+    font-size: max(1.1vw, 15px);
     color: white;
     font-family: 'Inconsolata', monospace;
 }
@@ -276,7 +283,7 @@ a {
 .third_sector_title {
     text-align: center;
     position: relative;
-    font-size: 40px;
+    font-size: 3vw;
 }
 
 .third_sector_text {
@@ -295,7 +302,7 @@ a {
     width: 100%;
     height: auto;
     display: grid;
-    grid-template-columns: 16% 34% 2% 32% 16%;
+    grid-template-columns: 14% 36% 2% 34% 14%;
     grid-template-rows: auto;
     grid-template-areas: "b1 b2 b3 b4 b5";
     text-align: left;
@@ -306,30 +313,32 @@ a {
 }
 
 .third_sector_grid1_info {
-    grid-area: b2;
+    grid-area: b4;
 }
 
 .third_sector_grid2_info {
-    grid-area: b4;
+    grid-area: b2;
 }
 
 .third_sector_grid_title {
     position: relative;
-    font-size: 40px;
+    font-size: max(2vw, 14px);
 }
 
 .third_sector_grid_text {
     margin-top: 4%;
     position: relative;
-    font-size: max(1.2vw, 2.4vh, 18px)
+    font-size: max(1.2vw, 16px);
 }
 
 .third_sector_grid1_img_container {
-    grid-area: b4;
+    grid-area: b2;
+    text-align: left;
 }
 
 .third_sector_grid2_img_container {
-    grid-area: b2;
+    grid-area: b4;
+    text-align: right;
 }
 
 /*=============================4=============================*/
@@ -364,7 +373,7 @@ a {
 
 .title_fourth_page_card{
     padding-top: 6%;
-    font-size: 20px;
+    font-size: max(1.3vw, 14px);
     color: white;
     border-bottom: 0;
     border-left: 0;
@@ -404,7 +413,51 @@ a {
 }
 
 .faq_question_row3 {
-    grid-row: 2;
+    grid-row: 3;
+}
+
+.faq_question_row4 {
+    grid-row: 4;
+}
+
+.faq_question_row5 {
+    grid-row: 5;
+}
+
+.faq_question_row6 {
+    grid-row: 6;
+}
+
+.faq_question_row7 {
+    grid-row: 7;
+}
+
+.faq_question_row8 {
+    grid-row: 8;
+}
+
+.faq_question_row9 {
+    grid-row: 9;
+}
+
+.faq_question_row10 {
+    grid-row: 10;
+}
+
+.faq_question_row11 {
+    grid-row: 11;
+}
+
+.faq_question_row12 {
+    grid-row: 12;
+}
+
+.faq_question_row13 {
+    grid-row: 13;
+}
+
+.faq_question_row14 {
+    grid-row: 14;
 }
 
 .plus_x {
@@ -421,7 +474,8 @@ a {
 
 .main_page_sixth_sector {
     height: auto;
-    margin-top: 6%
+    margin-top: 6%;
+    text-align: center;
 }
 
 .main_page_sixth_sector_buttons {

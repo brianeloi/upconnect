@@ -1,5 +1,5 @@
 export const vectorECommerce =
-'<svg width="350" height="350" viewBox="0 0 350 350" fill="none" xmlns="http://www.w3.org/2000/svg">'+
+'<svg width="min(420px, 100%)" height="auto" viewBox="0 0 350 350" fill="none" xmlns="http://www.w3.org/2000/svg">'+
 '<path d="M323.463 167.909L322.035 168.756L274.932 141.554L276.36 140.707L323.463 167.909Z" fill="#FAFAFA"/>'+
 '<path d="M276.36 140.707L322.035 167.083V71.687L276.353 45.325L276.36 140.707Z" fill="white"/>'+
 '<path d="M272.237 143.108L324.737 173.418V70.133L272.237 39.823V143.108ZM274.932 44.485L322.035 71.687V168.756L274.932 141.554V44.485Z" fill="#F5F5F5"/>'+
