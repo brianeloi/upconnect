@@ -27,7 +27,7 @@ export const mainPage = () => {
     const typing_div = '<div class="main_page_title base_pink_font typing_tick">|</div>'
 
     if(main_title) {
-      const text = main_title.innerText
+      const text = main_title.getAttribute('value')
       let j = 0
       for (let i = 0; i < text.length; i++) {
         if(text[i] == '<') {
@@ -38,7 +38,7 @@ export const mainPage = () => {
         } else {
           j++
           setTimeout(function(){
-            main_title.innerText = text.slice(0, 1 + i)
+            main_title.innerHTML = text.slice(0, 1 + i)
             $('#main_page_title').append(typing_div)
             const typing_tick = document.getElementsByClassName('typing_tick')[0]
             if(typing_tick && i == text.length - 1) {

@@ -33,8 +33,8 @@ export const mainPageBody = () => {
                 '</div>'
     let body =  '<div class="main_page_body1 main_page_sector">' +
                     '<div class="first_page_left_container">'+
-                        '<div id="main_page_title" class="main_page_title base_font_color">'+
-                            'Transforme sua <br>Presença Digital'+
+                        '<div id="main_page_title" class="main_page_title base_font_color"'+
+                            'value="Transforme sua <br>Presença Digital">'+
                         '</div>'+
                         '<div class="main_page_text base_font_color">' +
                             'No mundo atual ter uma presença online robusta<br>'+
