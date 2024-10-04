@@ -17,13 +17,13 @@ export const mainPageBody = () => {
                                 '</div>'
     let links = '<div class="links_and_back">'+
                     '<div class="links">'+
-                        '<a href="https://www.instagram.com/upconnectweb">'+
+                        '<a href="https://www.instagram.com/upconnectweb" target="_blank">'+
                             '<img src="images/insta.png" alt="instagram" width="33" height="33">' +
                         '</a><br>'+
-                        '<a href="https://www.facebook.com">'+
+                        '<a href="https://www.facebook.com" target="_blank">'+
                             '<img src="images/face.png" alt="instagram" width="33" height="33">' +
                         '</a><br>'+
-                        '<a href="'+ whatsapp_link +'">'+
+                        '<a href="'+ whatsapp_link +'" target="_blank">'+
                             '<img src="images/whats.png" alt="instagram" width="33" height="33">' +
                         '</a>'+
                     '</div>'+
@@ -33,7 +33,9 @@ export const mainPageBody = () => {
                 '</div>'
     let body =  '<div class="main_page_body1 main_page_sector">' +
                     '<div class="first_page_left_container">'+
-                        '<div class="main_page_title base_font_color">Transforme sua <br>Presença Digital</div>'+
+                        '<div id="main_page_title" class="main_page_title base_font_color">'+
+                            'Transforme sua <br>Presença Digital'+
+                        '</div>'+
                         '<div class="main_page_text base_font_color">' +
                             'No mundo atual ter uma presença online robusta<br>'+
                             'e eficiente é crucial para o sucesso de qualquer negócio.<br>'+
@@ -43,7 +45,7 @@ export const mainPageBody = () => {
                         '<div class="first_page_buttons">'+
                             '<div class="btn_container btn1">'+
                                 '<button class="btn btn_pink_full">'+
-                                    '<a href="'+ whatsapp_link +'">Fale com um especialista</a>'+
+                                    '<a href="'+ whatsapp_link +'" target="_blank">Fale com um especialista</a>'+
                                 '</button>'+
                             '</div>'+
                             '<div class="btn_container btn2">'+
@@ -77,7 +79,7 @@ export const mainPageBody = () => {
                                     'qualidade.'+
                                 '</div>'+
                                 '<div class="link_2nd_page_card">'+
-                                    '<a href="'+ whatsapp_link +'">saiba mais</a>'+
+                                    '<a href="'+ whatsapp_link +'" target="_blank">saiba mais</a>'+
                                 '</div>'+
                             '</div>'+ 
                         '</div>'+
@@ -95,7 +97,7 @@ export const mainPageBody = () => {
                                     'sua total satisfação.'+
                                 '</div>'+
                                 '<div class="link_2nd_page_card">'+
-                                    '<a href="'+ whatsapp_link +'">saiba mais</a>'+
+                                    '<a href="'+ whatsapp_link +'" target="_blank">saiba mais</a>'+
                                 '</div>'+
                             '</div>'+
                         '</div>'+
@@ -113,7 +115,7 @@ export const mainPageBody = () => {
                                     'retorno sobre o investimento'+
                                 '</div>'+
                                 '<div class="link_2nd_page_card">'+
-                                    '<a href="'+ whatsapp_link +'">saiba mais</a>'+
+                                    '<a href="'+ whatsapp_link +'" target="_blank">saiba mais</a>'+
                                 '</div>'+
                             '</div>'+
                         '</div>'+
@@ -198,7 +200,7 @@ export const mainPageBody = () => {
                                     'o seu crescimento</b>.'+
                                 '</div>'+
                                 '<div class="link_2nd_page_card">'+
-                                    '<a href="'+ whatsapp_link +'">saiba mais</a>'+
+                                    '<a href="'+ whatsapp_link +'" target="_blank">saiba mais</a>'+
                                 '</div>'+
                             '</div>'+
                         '</div>'+
@@ -220,7 +222,7 @@ export const mainPageBody = () => {
                                     'seu público-alvo</b>.'+
                                 '</div>'+
                                 '<div class="link_2nd_page_card">'+
-                                    '<a href="'+ whatsapp_link +'">saiba mais</a>'+
+                                    '<a href="'+ whatsapp_link +'" target="_blank">saiba mais</a>'+
                                 '</div>'+
                             '</div>'+
                         '</div>'+
@@ -242,7 +244,7 @@ export const mainPageBody = () => {
                                     '<b>perfeito funcionamento</b>'+
                                 '</div>'+
                                 '<div class="link_2nd_page_card">'+
-                                    '<a href="'+ whatsapp_link +'">saiba mais</a>'+
+                                    '<a href="'+ whatsapp_link +'" target="_blank">saiba mais</a>'+
                                 '</div>'+
                             '</div>'+
                         '</div>'+
@@ -322,7 +324,11 @@ export const mainPageBody = () => {
                                 'uma experiência de navegação consistente.'+
                             '</div>'+
                         '</div>' +
-                        '<div class="main_page_text base_font_color faq_question faq_question_row7">' +
+                        '<div class="more_faqs_question main_page_text faq_question_row7">' +
+                            'Ainda não esclareceu sua dúvida? '+
+                            '<div id="more_faqs_link" class="base_pink_font">CLIQUE AQUI!</div>'+
+                        '</div>'+
+                        '<div class="more_faqs main_page_text base_font_color faq_question faq_question_row8">' +
                             '7. Posso atualizar o conteúdo do site por conta própria?' +
                             '<div class="plus_x">'+
                                 vectorPlus +
@@ -333,7 +339,7 @@ export const mainPageBody = () => {
                                 'precisar de conhecimentos técnicos.'+
                             '</div>'+
                         '</div>' +
-                        '<div class="main_page_text base_font_color faq_question faq_question_row8">' +
+                        '<div class="more_faqs main_page_text base_font_color faq_question faq_question_row9">' +
                             '8. Vocês oferecem otimização para SEO (Search Engine Optimization)?' +
                             '<div class="plus_x">'+
                                 vectorPlus +
@@ -344,7 +350,7 @@ export const mainPageBody = () => {
                                 'ter um melhor posicionamento nos mecanismos de busca.'+
                             '</div>'+
                         '</div>' +
-                        '<div class="main_page_text base_font_color faq_question faq_question_row9">' +
+                        '<div class="more_faqs main_page_text base_font_color faq_question faq_question_row10">' +
                             '9. Vocês oferecem hospedagem e registro de domínio?' +
                             '<div class="plus_x">'+
                                 vectorPlus +
@@ -355,7 +361,7 @@ export const mainPageBody = () => {
                                 'serviço de hospedagem, podemos integrá-lo ao projeto.'+
                             '</div>'+
                         '</div>' +
-                        '<div class="main_page_text base_font_color faq_question faq_question_row10">' +
+                        '<div class="more_faqs main_page_text base_font_color faq_question faq_question_row11">' +
                             '10. Quais são as etapas de um projeto de criação de site?' +
                             '<div class="plus_x">'+
                                 vectorPlus +
@@ -371,7 +377,7 @@ export const mainPageBody = () => {
                                 '<li>Suporte e Manutenção – Suporte contínuo, se necessário.</li>' +
                             '</div>'+
                         '</div>' +
-                        '<div class="main_page_text base_font_color faq_question faq_question_row11">' +
+                        '<div class="more_faqs main_page_text base_font_color faq_question faq_question_row12">' +
                             '11. O que acontece se eu precisar de alterações após o lançamento?' +
                             '<div class="plus_x">'+
                                 vectorPlus +
@@ -382,7 +388,7 @@ export const mainPageBody = () => {
                                 'atender às suas novas necessidades.'+
                             '</div>'+
                         '</div>' +
-                        '<div class="main_page_text base_font_color faq_question faq_question_row12">' +
+                        '<div class="more_faqs main_page_text base_font_color faq_question faq_question_row13">' +
                             '12. Vocês oferecem criação de conteúdo para o site?' +
                             '<div class="plus_x">'+
                                 vectorPlus +
@@ -393,7 +399,7 @@ export const mainPageBody = () => {
                                 'atraente para os visitantes.'+
                             '</div>'+
                         '</div>' +
-                        '<div class="main_page_text base_font_color faq_question faq_question_row13">' +
+                        '<div class="more_faqs main_page_text base_font_color faq_question faq_question_row14">' +
                             '13. Vocês fazem integração com redes sociais e ferramentas de marketing?' +
                             '<div class="plus_x">'+
                                 vectorPlus +
@@ -404,15 +410,82 @@ export const mainPageBody = () => {
                                 'digital completa.'+
                             '</div>'+
                         '</div>' +
-                        '<div class="main_page_text base_font_color faq_question faq_question_row14">' +
-                            '14. Vocês fazem integração com redes sociais e ferramentas de marketing?' +
+                        '<div class="more_faqs main_page_text base_font_color faq_question faq_question_row15">' +
+                            '14. Qual é o processo de pagamento?' +
                             '<div class="plus_x">'+
                                 vectorPlus +
                             '</div>'+
                             '<div class="main_page_text base_font_color faq_answer">' +
-                                'Sim, podemos integrar o site com suas redes sociais, Google Analytics, ' +
-                                'ferramentas de e-mail marketing e chatbots, garantindo uma presença ' +
-                                'digital completa.'+
+                                'Geralmente, trabalhamos com um cronograma de pagamento em três partes: ' +
+                                '30% na aprovação do projeto, 40% no desenvolvimento, e 30% na entrega ' +
+                                'final. No entanto, podemos adaptar conforme a necessidade do cliente.'+
+                            '</div>'+
+                        '</div>' +
+                        '<div class="more_faqs main_page_text base_font_color faq_question faq_question_row16">' +
+                            '15. Vocês desenvolvem lojas virtuais?' +
+                            '<div class="plus_x">'+
+                                vectorPlus +
+                            '</div>'+
+                            '<div class="main_page_text base_font_color faq_answer">' +
+                                'Sim, criamos e-commerces personalizados com integração de meios de ' +
+                                'pagamento, carrinho de compras e controle de estoque, utilizando ' +
+                                'desenvolvimento personalizado para atender a requisitos específicos.'+
+                            '</div>'+
+                        '</div>' +
+                        '<div class="more_faqs main_page_text base_font_color faq_question faq_question_row17">' +
+                            '16. Como posso acompanhar o andamento do meu projeto?' +
+                            '<div class="plus_x">'+
+                                vectorPlus +
+                            '</div>'+
+                            '<div class="main_page_text base_font_color faq_answer">' +
+                                'Durante o projeto, mantemos você atualizado através de relatórios e ' +
+                                'reuniões de progresso, além de um ambiente de testes onde você pode ' +
+                                'visualizar o desenvolvimento em tempo real.'+
+                            '</div>'+
+                        '</div>' +
+                        '<div class="more_faqs main_page_text base_font_color faq_question faq_question_row18">' +
+                            '17. Qual é a diferença entre um site institucional e um e-commerce?' +
+                            '<div class="plus_x">'+
+                                vectorPlus +
+                            '</div>'+
+                            '<div class="main_page_text base_font_color faq_answer">' +
+                                'Um site institucional é focado em apresentar informações sobre a empresa, ' +
+                                'serviços e contato. Já o e-commerce permite a venda de produtos ou serviços ' +
+                                'online, com funcionalidades específicas como carrinho de compras e '+
+                                'integração de meios de pagamento.' +
+                            '</div>'+
+                        '</div>' +
+                        '<div class="more_faqs main_page_text base_font_color faq_question faq_question_row19">' +
+                            '18. Vocês oferecem treinamento para gerenciar o site?' +
+                            '<div class="plus_x">'+
+                                vectorPlus +
+                            '</div>'+
+                            '<div class="main_page_text base_font_color faq_answer">' +
+                                'Sim, após a entrega, oferecemos um treinamento básico para que .' +
+                                'você ou sua equipe possam gerenciar e atualizar o site com facilidade.' +
+                            '</div>'+
+                        '</div>' +
+                        '<div class="more_faqs main_page_text base_font_color faq_question faq_question_row20">' +
+                            '19. O que é um site com CMS (Sistema de Gerenciamento de Conteúdo)?' +
+                            '<div class="plus_x">'+
+                                vectorPlus +
+                            '</div>'+
+                            '<div class="main_page_text base_font_color faq_answer">' +
+                                'Nossos sistemas de gerenciamento de conteúdo (CMS) são desenvolvidos do ' +
+                                'zero, proporcionando uma experiência intuitiva e customizável. Isso ' +
+                                'permite que você edite o conteúdo do site sem precisar de conhecimentos '+
+                                'técnicos de programação.' +
+                            '</div>'+
+                        '</div>' +
+                        '<div class="more_faqs main_page_text base_font_color faq_question faq_question_row21">' +
+                            '20. Meu site precisa de políticas de privacidade e termos de uso?' +
+                            '<div class="plus_x">'+
+                                vectorPlus +
+                            '</div>'+
+                            '<div class="main_page_text base_font_color faq_answer">' +
+                                'Sim, é essencial ter esses documentos para estar em conformidade com a ' +
+                                'LGPD (Lei Geral de Proteção de Dados) e proteger os direitos dos usuários. ' +
+                                'Podemos ajudar na implementação dessas políticas.'+
                             '</div>'+
                         '</div>' +
                     '</div>'+
@@ -430,7 +503,7 @@ export const mainPageBody = () => {
                         '</div>' +
                         '<div class="btn_container sixth_sector_btn2">'+
                             '<button class = "btn btn_pink_empty">'+
-                                '<a href="'+ whatsapp_link +'">Fale com um especialista</a>'+
+                                '<a href="'+ whatsapp_link +'" target="_blank">Fale com um especialista</a>'+
                             '</button>'+
                         '</div>' +
                     '</div>' +
