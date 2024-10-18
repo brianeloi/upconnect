@@ -24,7 +24,7 @@ export const mainPage = () => {
     const main_title = document.getElementsByClassName("main_page_title")[0]
     const faqs = document.getElementsByClassName('faq_question')
     const more_faqs_link = document.getElementById('more_faqs_link')
-    const typing_div = '<div class="main_page_title base_pink_font typing_tick">|</div>'
+    const typing_div = '<div class="main_page_title typing_tick">|</div>'
 
     if(main_title) {
       const text = main_title.getAttribute('value')

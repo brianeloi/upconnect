@@ -33,7 +33,7 @@ export const mainPageBody = () => {
                 '</div>'
     let body =  '<div class="main_page_body1 main_page_sector">' +
                     '<div class="first_page_left_container">'+
-                        '<div id="main_page_title" class="main_page_title base_font_color"'+
+                        '<div id="main_page_title" class="main_page_title"'+
                             'value="Transforme sua <br>Presença Digital">'+
                         '</div>'+
                         '<div class="main_page_text base_font_color">' +

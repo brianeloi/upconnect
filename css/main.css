@@ -7,6 +7,8 @@ body {
     font-family: 'Michroma', sans-serif;
     background-color: #263238;
     color: white;
+    background: var(--bg-color);
+    transition: var(--transition);
 }
 
 #fullscreen {
@@ -30,9 +32,9 @@ input:focus, textarea:focus, select:focus{
 }
 
 .base_font_color {
-    color: #ffffff;
+    color: var(--text-color);
 }
 
 .base_pink_font {
-    color: #f52583;
+    color: var(--main-color);
 }
