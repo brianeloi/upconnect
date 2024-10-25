@@ -1,14 +1,53 @@
 import { vectorWorldConnection } from '../../images/vector_world_connection.js'
+import { vectorWorldConnectionLight } from '../../images/vector_world_connection_light.js'
 import { vectorRocketTeam } from '../../images/vector_rocket_team.js'
+import { vectorRocketTeamLight } from '../../images/vector_rocket_team_light.js'
 import { vectorECommerce} from '../../images/vector_e_commerce.js'
+import { vectorECommerceLight } from '../../images/vector_e_commerce_light.js'
 import { vectorMobile } from '../../images/vector_mobile.js'
 import { vectorMultiScreen } from '../../images/vector_multi_screen.js'
+import { vectorMultiScreenLight } from '../../images/vector_multi_screen_light.js'
 import { vectorPieces } from '../../images/vector_pieces.js'
+import { vectorPiecesLight } from '../../images/vector_pieces_light.js'
 import { vectorSecurity } from '../../images/vector_security.js'
+import { vectorSecurityLight } from '../../images/vector_security_light.js'
 import { vectorPlus } from '../../images/vector_plus.js'
 import { vectorUpConnectBig } from '../../images/vector_upconnect_big.js'
 
-export const mainPageBody = () => {
+export const mainPageBody = ({}) => {
+    const darkLightFunc = (mode) => {
+        const first_image_container = document.getElementById("first_image_container")
+        const third_sector_grid1_img_container = document.getElementById("third_sector_grid1_img_container")
+        const third_sector_grid2_img_container = document.getElementById("third_sector_grid2_img_container")
+        const fourth_sector_img_container1 = document.getElementById("fourth_sector_img_container1")
+        const fourth_sector_img_container2 = document.getElementById("fourth_sector_img_container2")
+        const fourth_sector_img_container3 = document.getElementById("fourth_sector_img_container3")
+        const changeAllChildSvgFill = (color) => {
+            const pulses = document.getElementsByClassName('plus_x')
+            if (pulses) for (let i = 0; i < pulses.length; i++) {
+                pulses[i].childNodes[0].childNodes[0].attributes.fill.value = color
+            }
+        }
+
+        if(mode == 'light') {
+            first_image_container.innerHTML = vectorWorldConnectionLight
+            third_sector_grid1_img_container.innerHTML = vectorRocketTeamLight
+            third_sector_grid2_img_container.innerHTML = vectorECommerceLight
+            fourth_sector_img_container1.innerHTML = vectorMultiScreenLight
+            fourth_sector_img_container2.innerHTML = vectorPiecesLight
+            fourth_sector_img_container3.innerHTML = vectorSecurityLight
+            changeAllChildSvgFill("#263238")
+        } else {
+            first_image_container.innerHTML = vectorWorldConnection
+            third_sector_grid1_img_container.innerHTML = vectorRocketTeam
+            third_sector_grid2_img_container.innerHTML = vectorECommerce
+            fourth_sector_img_container1.innerHTML = vectorMultiScreen
+            fourth_sector_img_container2.innerHTML = vectorPieces
+            fourth_sector_img_container3.innerHTML = vectorSecurity
+            changeAllChildSvgFill("white")
+        }
+    }
+
     let whatsapp_link = 'https://api.whatsapp.com/send?phone=5511989213124&text=Ol%C3%A1,%20gostaria'+
                         '%20de%20obter%20informa%C3%A7%C3%B5es%20sobre%20servi%C3%A7os%20'+
                         'da%20UpConnect'
@@ -53,8 +92,7 @@ export const mainPageBody = () => {
                             '</div>'+
                         '</div>'+
                     '</div>'+
-                    '<div class="first_image_container">'+
-                        vectorWorldConnection +
+                    '<div id="first_image_container" class="first_image_container">'+
                     '</div>'+
                 '</div>'
 
@@ -127,7 +165,7 @@ export const mainPageBody = () => {
                     '<div class="third_sector_grids_container">'+
                         '<div class="third_sector_grid third_sector_grid1">'+
                             '<div class="third_sector_grid1_info">'+
-                                '<div class="third_sector_grid_title base_font_color">Desenvolvimento<br>'+
+                                '<div class="third_sector_grid_title">Desenvolvimento<br>'+
                                 'de Websites</div>'+
                                 '<div class="main_page_text third_sector_grid_text base_font_color">' +
                                     'Criamos websites personalizados, responsivos<br>'+
@@ -135,8 +173,7 @@ export const mainPageBody = () => {
                                     'negócio se destaque e atraia mais visitantes.'+
                                 '</div>' +
                             '</div>'+
-                            '<div class="third_sector_grid1_img_container">'+
-                                vectorRocketTeam +
+                            '<div id = "third_sector_grid1_img_container" class="third_sector_grid1_img_container">'+
                             '</div>'+
                         '</div>'+
                     '</div>'+
@@ -152,24 +189,7 @@ export const mainPageBody = () => {
                                     'marketing para impulsionar suas vendas.' +
                                 '</div>' +
                             '</div>'+
-                            '<div class="third_sector_grid2_img_container">'+
-                                vectorECommerce +
-                            '</div>'+
-                        '</div>'+
-                    '</div>'+
-                    '<div class="third_sector_grids_container">'+
-                        '<div class="third_sector_grid third_sector_grid3">'+
-                            '<div class="third_sector_grid1_info">'+
-                                '<div class="third_sector_grid_title base_font_color">Desenvolvimento de<br>'+
-                                'Aplicativos Mobile</div>'+
-                                '<div class="main_page_text third_sector_grid_text base_font_color">' +
-                                    'Criamos aplicativos móveis inovadores para<br>'+
-                                    'Android e iOS, proporcionando experiências<br>'+
-                                    'incríveis para seus usuários.' +
-                                '</div>' +
-                            '</div>'+
-                            '<div class="third_sector_grid1_img_container">'+
-                                vectorMobile +
+                            '<div id="third_sector_grid2_img_container" class="third_sector_grid2_img_container">'+
                             '</div>'+
                         '</div>'+
                     '</div>'+
@@ -184,8 +204,7 @@ export const mainPageBody = () => {
                     '<div class="cards_container4">'+
                         '<div class="second_page_cards second_page_card1">'+
                             '<div class="inside_cards">'+
-                                '<div class="fourth_sector_img_container">'+
-                                    vectorMultiScreen +
+                                '<div id="fourth_sector_img_container1" class="fourth_sector_img_container">'+
                                 '</div>'+
                                 '<div class="title_fourth_page_card">'+
                                     'Marketing Digital<br>'+
@@ -206,8 +225,7 @@ export const mainPageBody = () => {
                         '</div>'+
                         '<div class="second_page_cards second_page_card2">'+
                             '<div class="inside_cards">'+
-                                '<div class="fourth_sector_img_container">'+
-                                    vectorPieces +
+                                '<div id="fourth_sector_img_container2" class="fourth_sector_img_container">'+
                                 '</div>'+
                                 '<div class="title_fourth_page_card">'+
                                     'Design Gráfico e<br>'+
@@ -228,8 +246,7 @@ export const mainPageBody = () => {
                         '</div>'+
                         '<div class="second_page_cards second_page_card3">'+
                             '<div class="inside_cards">'+
-                                '<div class="fourth_sector_img_container">'+
-                                    vectorSecurity +
+                                '<div id="fourth_sector_img_container3" class="fourth_sector_img_container">'+
                                 '</div>'+
                                 '<div class="title_fourth_page_card">'+
                                     'Hospedagem e<br>'+
@@ -529,6 +546,7 @@ export const mainPageBody = () => {
                 '</div>'+
             '</div>'
 
-    return  upconnect_big_name + links + body + body2 + body3 + body4 +
+    let page =  upconnect_big_name + links + body + body2 + body3 + body4 +
             body5 + body6 + upconnect_big_name + footer
+    return { body: page, darkLightFunc: darkLightFunc }
 }

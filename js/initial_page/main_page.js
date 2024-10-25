@@ -8,12 +8,12 @@ export const mainPage = () => {
   callCss('main_page')
   callCss('form_content')
   const formButtonFunction = () => {
-    switchPage({ newPage: formPage, params: {formParams: { question: 'number' }} })
+    switchPage({ newPage: formPage})
   }
 
-  let header = headerPage()
-  let body   = mainPageBody({ formButtonFunction, formParams: { question: 'name' } })
-  let main_page = header + body
+  let header                  = headerPage()
+  let { body, darkLightFunc } = mainPageBody({formButtonFunction})
+  let main_page               = header + body
 
   $('#fullscreen').append(main_page)
   dispatchEvent(new Event('load'));
@@ -25,6 +25,7 @@ export const mainPage = () => {
     const faqs = document.getElementsByClassName('faq_question')
     const more_faqs_link = document.getElementById('more_faqs_link')
     const typing_div = '<div class="main_page_title typing_tick">|</div>'
+    const btn = document.querySelector(".theme-switch input");
 
     if(main_title) {
       const text = main_title.getAttribute('value')
@@ -95,6 +96,23 @@ export const mainPage = () => {
         } else {
           extra_faq.style.display="block";
         }
+      }
+    })
+
+    let classList = document.documentElement.classList
+    let modeDefined = classList[classList.length - 1]
+    if (modeDefined == 'light'){
+      darkLightFunc('light')
+    } else {
+      darkLightFunc('dark')
+    }
+    btn.addEventListener("click", () => {
+      classList = document.documentElement.classList
+      modeDefined = classList[classList.length - 1]
+      if (modeDefined == 'light'){
+        darkLightFunc('light')
+      } else {
+        darkLightFunc('dark')
       }
     })
   }
