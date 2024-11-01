@@ -19,7 +19,6 @@ clip-path: polygon(
     width: 100%;
     height: auto;
     position: fixed;
-    margin-top: 29.3%;
     display: grid;
     z-index: 1;
     grid-template-columns: 6% 44% 6% 38% 6%;
@@ -34,12 +33,14 @@ clip-path: polygon(
     filter: drop-shadow(5px 5px 5px #222);
 }
 
-.back_link {
+.up_link {
     margin-top: 100%;
     grid-area: a5;
     cursor: pointer;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #222);
+    position: fixed;
+    bottom: 10%;
 }
 
 /*=========================================1==========================================*/

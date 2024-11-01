@@ -14,7 +14,7 @@ import { vectorSecurityLight } from '../../images/vector_security_light.js'
 import { vectorPlus } from '../../images/vector_plus.js'
 import { vectorUpConnectBig } from '../../images/vector_upconnect_big.js'
 
-export const mainPageBody = ({}) => {
+export const mainPageBody = () => {
     const darkLightFunc = (mode) => {
         const first_image_container = document.getElementById("first_image_container")
         const third_sector_grid1_img_container = document.getElementById("third_sector_grid1_img_container")
@@ -48,6 +48,74 @@ export const mainPageBody = ({}) => {
         }
     }
 
+    window.onload = initPage;
+    function initPage(){
+        const main_title = document.getElementsByClassName("main_page_title")[0]
+        const faqs = document.getElementsByClassName('faq_question')
+        const more_faqs_link = document.getElementById('more_faqs_link')
+        const typing_div = '<div class="main_page_title typing_tick">|</div>'
+
+        if(main_title) {
+        const text = main_title.getAttribute('value')
+        let j = 0
+        for (let i = 0; i < text.length; i++) {
+            if(text[i] == '<') {
+            i += 3
+            continue;
+            } else if(text[i] == ' '){
+            continue;
+            } else {
+            j++
+            setTimeout(function(){
+                main_title.innerHTML = text.slice(0, 1 + i)
+                $('#main_page_title').append(typing_div)
+                const typing_tick = document.getElementsByClassName('typing_tick')[0]
+                if(typing_tick && i == text.length - 1) {
+                setInterval(function () {
+                    if(typing_tick.style.display == 'inline-block') {
+                    typing_tick.style.display="none";
+                    } else {
+                    typing_tick.style.display="inline-block";
+                    }
+                }, 400)
+                }
+            }, 100*j);
+            }
+        }
+        }
+        
+        if (faqs) {
+        for (let i = 0; i < faqs.length; i++) {
+            let faq = faqs[i]
+            faq && faq.addEventListener('click', () => {
+            let faq_answer = faq.childNodes[2]
+            if(faq_answer) {
+                if(faq_answer.style.display == 'block') {
+                faq_answer.style.display="none";
+                } else {
+                faq_answer.style.display="block";
+                }
+            }
+    
+            let faq_plus_x = faq.childNodes[1]
+            if(faq_plus_x) {
+                if(faq_answer.style.display == 'block') {
+                faq_plus_x.style.transform="rotate(45deg)";
+                } else {
+                faq_plus_x.style.transform="none";
+                }
+            }
+            })
+        }
+        }
+
+        more_faqs_link && more_faqs_link.addEventListener('click', () => {
+        localStorage.setItem('page', 'faq')
+        location.reload()
+        window.scrollTo(0, 0);
+        })
+    }
+
     let whatsapp_link = 'https://api.whatsapp.com/send?phone=5511989213124&text=Ol%C3%A1,%20gostaria'+
                         '%20de%20obter%20informa%C3%A7%C3%B5es%20sobre%20servi%C3%A7os%20'+
                         'da%20UpConnect'
@@ -66,7 +134,7 @@ export const mainPageBody = ({}) => {
                             '<img src="images/whats.png" alt="instagram" width="33" height="33">' +
                         '</a>'+
                     '</div>'+
-                    '<div id="link_back" class="back_link">'+
+                    '<div id="link_back" class="up_link">'+
                         '<img src="images/seta_rosa.png" alt="instagram" width="50" height="50">' +
                     '</div>'+
                 '</div>'
@@ -269,7 +337,7 @@ export const mainPageBody = ({}) => {
                 '</div>'
 
     let body5 = '<div class="main_page_fifth_sector main_page_sector">' +
-                    '<div class="second_sector_title base_pink_font">FAQ</div>'+
+                    '<div class="second_sector_title base_pink_font">FAQ - Dúvidas Frequentes</div>'+
                     '<div class="main_page_text second_sector_text base_font_color">' +
                         'Perguntas mais frequentes' +
                     '</div>' +
@@ -343,7 +411,9 @@ export const mainPageBody = ({}) => {
                         '</div>' +
                         '<div class="more_faqs_question main_page_text faq_question_row7">' +
                             'Ainda não esclareceu sua dúvida? '+
-                            '<div id="more_faqs_link" class="base_pink_font">CLIQUE AQUI!</div>'+
+                            '<div id="more_faqs_link" class="base_pink_font">'+
+                                'CLIQUE AQUI!'+
+                            '</div>'+
                         '</div>'+
                         '<div class="more_faqs main_page_text base_font_color faq_question faq_question_row8">' +
                             '7. Posso atualizar o conteúdo do site por conta própria?' +
@@ -548,5 +618,5 @@ export const mainPageBody = ({}) => {
 
     let page =  upconnect_big_name + links + body + body2 + body3 + body4 +
             body5 + body6 + upconnect_big_name + footer
-    return { body: page, darkLightFunc: darkLightFunc }
+    return { body: page, darkLightFuncBody: darkLightFunc }
 }

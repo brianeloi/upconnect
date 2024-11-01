@@ -2,6 +2,12 @@ import { generatePdf } from './modules/jspdf.js'
 import { mainPage } from './js/initial_page/main_page.js'
 //import { ExcelToJSON } from './modules/xlsx_to_json.js'
 import { mainTable } from './db/main_table2.js'
+import { callCss } from './modules/call_css.js'
+
+callCss('main_page')
+callCss('form_content')
+callCss('header_page')
+callCss('faq_page')
 
 mainPage()
 
