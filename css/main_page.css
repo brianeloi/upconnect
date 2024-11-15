@@ -31,6 +31,9 @@ clip-path: polygon(
     grid-area: a1;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #222);
+    position: fixed;
+    bottom: 30%;
+    left: 2%;
 }
 
 .up_link {
@@ -406,6 +409,7 @@ a {
     grid-template-columns: 20% 60% 20%;
     grid-template-rows: auto;
     grid-template-areas: "a1 a2 a3";
+    margin-top: 2%;
 }
 
 .faq_question {
@@ -552,7 +556,6 @@ a {
 .sixth_sector_btn2 {
     grid-area: a4;
 }
-
 
 /*==============================FOOTER==============================*/
 

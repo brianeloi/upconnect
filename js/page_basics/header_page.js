@@ -21,8 +21,8 @@ export const headerPage = () => {
       headerLogoDiv.innerHTML = vectorLogoLight
     }
   }
-  window.onload = initPage;
-  function initPage(){
+  
+  const initPage = () => {
     const btn_to_section = {
       "home": "header", "about_us": "discription", "services": "our_services",
       "contact": "budget", "link_back": "header", "services2": "our_services"
@@ -31,26 +31,11 @@ export const headerPage = () => {
       let btn = document.getElementById(btn_id)
       let section = document.getElementById(btn_to_section[btn_id])
       if (btn && section) {
-        btn.onclick = function(event) {
+        btn.onclick = function() {
           section.scrollIntoView();
         }
       }
     });
-
-    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-    let headerLogoDiv = document.getElementById("header_text")
-    if (prefersDarkScheme.matches && !localStorage.getItem('mode')) localStorage.setItem('mode', 'dark')
-    let modeDefined = localStorage.getItem('mode')
-    
-    /*if (modeDefined == 'dark') {
-      localStorage.setItem('mode', 'dark')
-      document.documentElement.classList.toggle("dark");
-      headerLogoDiv.innerHTML = vectorLogo
-    } else {
-      localStorage.setItem('mode', 'light')
-      document.documentElement.classList.toggle("light");
-      headerLogoDiv.innerHTML = vectorLogoLight
-    }*/
   }
 
   let header =    '<header id="header" class="header base_bg">' + 
@@ -90,5 +75,5 @@ export const headerPage = () => {
                       '</div>'+
                   '</header>'
 
-  return { header, darkLightFuncHeader: darkLightFunc }
+  return { header, darkLightFuncHeader: darkLightFunc, headerInitFunction: initPage }
 }

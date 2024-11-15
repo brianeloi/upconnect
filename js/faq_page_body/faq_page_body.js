@@ -1,13 +1,17 @@
 import { vectorPlus } from '../../images/vector_plus.js'
 import { vectorBackButton } from '../../images/vector_back_button.js'
+import { vectorMagnifyingGlass } from '../../images/vectorMagnifyingGlass.js'
 
 export const faqPageBody = () => {
+    const row_class = 'faq_question_row'
+
     const changeAllChildSvgFill = (color) => {
         let pulses = document.getElementsByClassName('plus_x')
         if (pulses) for (let i = 0; i < pulses.length; i++) {
             pulses[i].childNodes[0].childNodes[0].attributes.fill.value = color
         }
     }
+    
     const darkLightFunc = (mode) => {
         if(mode == 'light') {
             changeAllChildSvgFill("#263238")
@@ -16,14 +20,87 @@ export const faqPageBody = () => {
         }
     }
 
-    window.onload = initPage;
-    function initPage(){
-        const link_back_btn = document.getElementById('link_back')
-        link_back_btn && link_back_btn.addEventListener('click', () => {
+    const initPage = () => {
+        let page_back_btn = document.getElementById('page_back')
+        page_back_btn && page_back_btn.addEventListener('click', () => {
             localStorage.setItem('page', '')
             location.reload()
             window.scrollTo(0, 0);
         })
+
+        const faqs = document.getElementsByClassName('faq_question')
+        if (faqs) {
+            for (let i = 0; i < faqs.length; i++) {
+                let faq = faqs[i]
+                faq && faq.addEventListener('click', () => {
+                    let faq_answer = faq.childNodes[2]
+                    if(faq_answer) {
+                        if(faq_answer.style.display == 'block') {
+                        faq_answer.style.display="none";
+                        } else {
+                        faq_answer.style.display="block";
+                        }
+                    }
+            
+                    let faq_plus_x = faq.childNodes[1]
+                    if(faq_plus_x) {
+                        if(faq_answer.style.display == 'block') {
+                        faq_plus_x.style.transform="rotate(45deg)";
+                        } else {
+                        faq_plus_x.style.transform="none";
+                        }
+                    }
+                })
+            }
+        }
+
+        const eliminate_useless_words = (words) => {
+            const useless_words = ['para', 'um', 'a', 'as', 'e', 'o', 'os', 'na', 'de', 'do', 'é', '']
+            return words.filter(word => !useless_words.includes(word))
+        }
+
+        const reorder_elements = (faqs_order, faqs) => {
+            let max = Math.max(...faqs_order)
+            let faqs_parent = faqs[0].parentNode
+            let faq_elements = []
+            for (let n = max; n >= 0; n--) {
+                for (let f = 0; f < faqs_order.length; f++){
+                    if(faqs_order[f] == n) {
+                        faq_elements.push(f)
+                    }
+                }
+            }
+            
+            for (let e = 0; e < faq_elements.length; e++) {
+                let classList = faqs[faq_elements[e]].classList
+                classList.remove(classList[classList.length - 1])
+                classList.add(row_class + (e + 1))
+            }
+        }
+
+        const reorder_faqs_by_search = (search_input) => {
+            let search_words = search_input.value.split(' ')
+            search_words = eliminate_useless_words(search_words)
+            let faqs_order = []
+            for (let i = 0; i < faqs.length; i++) {
+                let faq_words = faqs[i].innerText.split(' ')
+                faq_words = eliminate_useless_words(faq_words)
+                faqs_order[i] = 0
+                for (let s = 0; s < search_words.length; s++){
+                    for (let f = 0; f < faq_words.length; f++){
+                        if (faq_words[f].toLowerCase().includes(search_words[s].toLowerCase())) {
+                            faqs_order[i]++
+                        }
+                    }
+                }
+            }
+            reorder_elements(faqs_order, faqs)
+        }
+
+        const search_input = document.getElementById('search_input')
+        search_input && faqs && search_input.addEventListener("keyup", () => {
+            reorder_faqs_by_search(search_input)
+        });
     }
 
     let whatsapp_link = 'https://api.whatsapp.com/send?phone=5511989213124&text=Ol%C3%A1,%20gostaria'+
@@ -31,8 +108,19 @@ export const faqPageBody = () => {
                         'da%20UpConnect'
     
     let back_btn = '<div class="links_and_back">'+
-                    '<div id="link_back" class="link_back">'+
+                    '<div id="page_back" class="link_back">'+
                         vectorBackButton +
+                    '</div>'+
+                    '<div class="media_links">'+
+                        '<a href="https://www.instagram.com/upconnectweb" target="_blank">'+
+                            '<img src="images/insta.png" alt="instagram" width="33" height="33">' +
+                        '</a><br>'+
+                        '<a href="https://www.facebook.com" target="_blank">'+
+                            '<img src="images/face.png" alt="instagram" width="33" height="33">' +
+                        '</a><br>'+
+                        '<a href="'+ whatsapp_link +'" target="_blank">'+
+                            '<img src="images/whats.png" alt="instagram" width="33" height="33">' +
+                        '</a>'+
                     '</div>'+
                     '<div id="link_back" class="up_link">'+
                         '<img src="images/seta_rosa.png" alt="instagram" width="50" height="50">' +
@@ -42,7 +130,11 @@ export const faqPageBody = () => {
     let body1 = '<div class="main_page_faq main_page_sector_faq">' +
         '<div class="second_sector_title base_pink_font">FAQ - Dúvidas Frequentes</div>'+
         '<div class="main_page_text second_sector_text base_font_color">' +
-            'Perguntas mais frequentes' +
+            'Navegue pelas perguntas frequentes para melhorar sua compreensão' +
+        '</div>' +
+        '<div class="search_box">' +
+            '<input id="search_input" class="search_input"></input>' +
+            vectorMagnifyingGlass +
         '</div>' +
         '<div class="main_page_fifth_sector_faqs">'+
             '<div class="main_page_text base_font_color faq_question faq_question_row1">' +
@@ -57,7 +149,7 @@ export const faqPageBody = () => {
                 '</div>'+
             '</div>' +
             '<div class="main_page_text base_font_color faq_question faq_question_row2">' +
-                '1. Quais informações preciso fornecer para começar?' +
+                '2. Quais informações preciso fornecer para começar?' +
                 '<div class="plus_x">'+
                     vectorPlus +
                 '</div>'+
@@ -315,5 +407,5 @@ export const faqPageBody = () => {
 
     const body = back_btn + body1 + body2 + footer
 
-    return { body: body, darkLightFuncBody: darkLightFunc }
+    return { body: body, darkLightFuncBody: darkLightFunc, bodyInitFunction: initPage }
 }

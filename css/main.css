@@ -11,6 +11,10 @@ body {
     transition: var(--transition);
 }
 
+input {
+    font-family: 'Michroma', sans-serif;
+}
+
 #fullscreen {
     height: 100%;
 }
