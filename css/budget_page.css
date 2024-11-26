@@ -1,0 +1,60 @@
+.budget_page_toggle {
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    height: auto;
+    position: relative;
+    display: grid;
+    grid-template-columns: 20% 30% 30% 20%;
+    grid-template-rows: auto;
+    grid-template-areas: "a1 a2 a3 a4";
+}
+
+.budget_btn1{
+    grid-area: a2;
+}
+
+.budget_btn2{
+    grid-area: a3;
+}
+
+.budget_btn1, .budget_btn2 {
+    text-align: center;
+    font-family: inherit;
+    border: solid 1px var(--main-color);
+    cursor: pointer;
+}
+
+.budget_toggle_selected {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.budget_toggle_unselected {
+    color: var(--text-color2);
+}
+
+.custom_budget_page_container {
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    height: auto;
+    position: relative;
+    display: grid;
+    grid-template-columns: 10% 39.5% 1% 39.5% 10%;
+    grid-template-rows: auto;
+    grid-template-areas: "a1 a2 a3 a4 a5";
+}
+
+.budget_prices_card {
+    grid-area: a4;
+}
+
+.division_line {
+    background-color: var(--main-color);
+    height: 1px;
+    width: 88%;
+    margin: 5% 6%;
+}

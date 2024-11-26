@@ -125,9 +125,11 @@ export const mainPageBody = () => {
     let whatsapp_link = 'https://api.whatsapp.com/send?phone=5511989213124&text=Ol%C3%A1,%20gostaria'+
                         '%20de%20obter%20informa%C3%A7%C3%B5es%20sobre%20servi%C3%A7os%20'+
                         'da%20UpConnect'
+                        
     let upconnect_big_name =   '<div class="upconnect_big_name">'+
                                     vectorUpConnectBig +
                                 '</div>'
+
     let links = '<div class="links_and_back">'+
                     '<div class="links">'+
                         '<a href="https://www.instagram.com/upconnectweb" target="_blank">'+
@@ -144,6 +146,7 @@ export const mainPageBody = () => {
                         '<img src="images/seta_rosa.png" alt="instagram" width="50" height="50">' +
                     '</div>'+
                 '</div>'
+
     let body =  '<div class="main_page_body1 main_page_sector">' +
                     '<div class="first_page_left_container">'+
                         '<div id="main_page_title" class="main_page_title"'+

@@ -8,6 +8,7 @@ callCss('main_page')
 callCss('form_content')
 callCss('header_page')
 callCss('faq_page')
+callCss('budget_page')
 
 mainPage()
 

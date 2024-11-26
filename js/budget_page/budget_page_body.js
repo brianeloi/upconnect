@@ -12,6 +12,25 @@ export const budgetPageBody = () => {
             location.reload()
             window.scrollTo(0, 0);
         })
+
+        let budget_toogle_btn1 = document.getElementById('budget_toogle_btn1')
+        let budget_toogle_btn2 = document.getElementById('budget_toogle_btn2')
+        budget_toogle_btn1 && budget_toogle_btn1.addEventListener('click', () => {
+            if (budget_toogle_btn1.classList.contains('budget_toggle_unselected')) {
+                budget_toogle_btn2.classList.remove('budget_toggle_selected')
+                budget_toogle_btn2.classList.add('budget_toggle_unselected')
+                budget_toogle_btn1.classList.add('budget_toggle_selected')
+                budget_toogle_btn1.classList.remove('budget_toggle_unselected')
+            }
+        })
+        budget_toogle_btn2 && budget_toogle_btn2.addEventListener('click', () => {
+            if (budget_toogle_btn2.classList.contains('budget_toggle_unselected')) {
+                budget_toogle_btn1.classList.remove('budget_toggle_selected')
+                budget_toogle_btn1.classList.add('budget_toggle_unselected')
+                budget_toogle_btn2.classList.add('budget_toggle_selected')
+                budget_toogle_btn2.classList.remove('budget_toggle_unselected')
+            }
+        })
     }
 
     let whatsapp_link = 'https://api.whatsapp.com/send?phone=5511989213124&text=Ol%C3%A1,%20gostaria'+
@@ -46,6 +65,25 @@ export const budgetPageBody = () => {
         '</div>'+
     '</div>'
 
+    let body2 =
+    '<div class="budget_page_toggle">' +
+        '<div id="budget_toogle_btn1" class="btn budget_btn1 budget_toggle_selected"> Orçamento personalizado </div>'+
+        '<div id="budget_toogle_btn2" class="btn budget_btn2 budget_toggle_unselected"> Consultar pacotes fechados </div>'+
+    '</div>'+
+    '<div class="custom_budget_page_container">' +
+        '<div class="second_page_cards budget_prices_card">'+
+            '<div class="inside_cards">'+
+                '<div class="title_second_page_card">'+
+                    'Meu Orçamento'+
+                '</div>'+
+                '<div class="division_line"></div>'+
+                '<div class="budget_item_grid">'+
+                    '<div class="text_second_page_card">'+
+                '</div>'+
+            '</div>'+
+        '</div>'+
+    '</div>'
+
     let footer = '<div class="main_page_footer">'+
                     '<div class="main_page_footer_title">'+
                         'UpConnect'+
@@ -66,7 +104,7 @@ export const budgetPageBody = () => {
                     '</div>'+
                 '</div>'
 
-    const body = back_btn + body1 + footer
+    const body = back_btn + body1 + body2 + footer
 
     return { body: body, darkLightFuncBody: darkLightFunc, bodyInitFunction: initPage }
 }
